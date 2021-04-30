@@ -1,0 +1,10 @@
+{
+  "name": "cordova-plugin-webview-cache-delete",
+  "version": "0.0.1",
+  "cordova": {
+    "id": "cordova-plugin-webview-cache-delete",
+    "platforms": [
+      "android"
+    ]
+  }
+}
