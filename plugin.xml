@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-cache-delete" version="1.0.0">
+
+  <name>Cordova Cache Delete</name>
+  <description>This is a WebView cache plugin for Cordova supporting Android. It allows to delete the cordova webview cache.</description>
+  <license></license>
+  <keywords>bluetooth, BLE, bluetooth low energy, bluetooth smart</keywords>
+  <repo>https://github.com/mesmotronic/cordova-fullscreen-plugin.git</repo>
+
+  <js-module src="www/CashDelete.js" name="CashDelete">
+    <clobbers target="CashDelete" />
+  </js-module>
+
+  <!-- Android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CashDelete">
+        <param name="android-package" value="jp.w2corp.Sample"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+    <!-- source定義(ソースの設置場所を指定) -->
+    <source-file src="src/android/CashDelete.java" target-dir="src/jp/w2corp/Sample/" />
+  </platform>
+
+</plugin>
