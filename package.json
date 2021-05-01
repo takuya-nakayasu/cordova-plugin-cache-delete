@@ -4,9 +4,9 @@
   "author": {
     "name": "Takuya Nakayasu",
     "email": "l08084.1989@gmail.com",
-    "url": "https://github.com/l08084/"
+    "url": "https://github.com/l08084"
   },
-  "homepage": "",
+  "homepage": "https://github.com/l08084/cordova-plugin-cache-delete",
   "cordova": {
     "id": "cordova-plugin-cache-delete",
     "platforms": [
