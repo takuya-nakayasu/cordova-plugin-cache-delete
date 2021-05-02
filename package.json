@@ -14,7 +14,7 @@
     ]
   },
   "description": "This is a WebView cache plugin for Cordova supporting Android. It allows to delete the cordova webview cache.",
-  "license": "",
+  "license": "Apache-2.0",
   "keywords": [
     "cordova",
     "webview",

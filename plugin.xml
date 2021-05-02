@@ -5,7 +5,7 @@
 
   <name>Cordova Cache Delete</name>
   <description>This is a WebView cache plugin for Cordova supporting Android. It allows to delete the cordova webview cache.</description>
-  <license></license>
+  <license>Apache 2.0 License</license>
   <keywords>cordova, webview, cache, delete, Code Cache, android, HTTP Cache, cordova-android</keywords>
   <repo>https://github.com/l08084/cordova-plugin-cache-delete.git</repo>
 
