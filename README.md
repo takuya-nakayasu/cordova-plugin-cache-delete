@@ -1,1 +1,1 @@
-# Delete Cache File
+# Cordova plugin to delete Webview cache
