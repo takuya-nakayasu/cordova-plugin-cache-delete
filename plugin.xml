@@ -5,8 +5,8 @@
   <name>Cordova Cache Delete</name>
   <description>This is a WebView cache plugin for Cordova supporting Android. It allows to delete the cordova webview cache.</description>
   <license></license>
-  <keywords>bluetooth, BLE, bluetooth low energy, bluetooth smart</keywords>
-  <repo>https://github.com/mesmotronic/cordova-fullscreen-plugin.git</repo>
+  <keywords>cordova, webview, cache, delete, Code Cache, android, HTTP Cache, cordova-android</keywords>
+  <repo>https://github.com/l08084/cordova-plugin-cache-delete.git</repo>
 
   <js-module src="www/CashDelete.js" name="CashDelete">
     <clobbers target="CashDelete" />
