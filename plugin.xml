@@ -13,7 +13,6 @@
     <clobbers target="CashDelete" />
   </js-module>
 
-  <!-- Android -->
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="CashDelete">
