@@ -16,8 +16,8 @@
 
 var exec = require("cordova/exec");
 
-var CashDelete = function (success, error) {
-  exec(success, error, "CashDelete", "task", []);
+var CacheDelete = function (success, error) {
+  exec(success, error, "CacheDelete", "deleteCache", []);
 };
 
-module.exports = CashDelete;
+module.exports = CacheDelete;
