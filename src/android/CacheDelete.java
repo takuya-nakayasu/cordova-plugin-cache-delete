@@ -16,7 +16,7 @@
 
 package jp.l08084;
 
-import android.util.Log;
+import java.io.File;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -24,7 +24,7 @@ import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import java.io.File;
+import android.util.Log;
 
 public class CacheDelete extends CordovaPlugin {
     private static final String TAG = "CacheDelete";
@@ -37,7 +37,6 @@ public class CacheDelete extends CordovaPlugin {
             deleteCache(callbackContext);
             return true;
         }
-
         return false;
     }
 
@@ -51,25 +50,25 @@ public class CacheDelete extends CordovaPlugin {
      *
      */
     private void clearCacheFolder (File dir, CallbackContext callbackContext) {
-        if (dir != null && dir.isDirectory()) {
-            try {
+        try {
+            if (dir != null && dir.isDirectory()) {
                 for (File child : dir.listFiles()) {
                     if (child.isDirectory()) {
                         clearCacheFolder(child, callbackContext);
                     }
                     child.delete();
                 }
-                // send success result to cordova
-                PluginResult result = new PluginResult(PluginResult.Status.OK);
-                result.setKeepCallback(false);
-                callback.sendPluginResult(result);
-            } catch (Exception ex) {
-                Log.e(TAG, ERROR_MESSAGE, ex);
-                // return error answer to cordova
-                PluginResult result = new PluginResult(PluginResult.Status.ERROR, ERROR_MESSAGE);
-                result.setKeepCallback(false);
-                callback.sendPluginResult(result);
             }
+            // send success result to cordova
+            PluginResult result = new PluginResult(PluginResult.Status.OK);
+            result.setKeepCallback(false);
+            callback.sendPluginResult(result);
+        } catch (Exception ex) {
+            Log.e(TAG, ERROR_MESSAGE, ex);
+            // return error answer to cordova
+            PluginResult result = new PluginResult(PluginResult.Status.ERROR, ERROR_MESSAGE);
+            result.setKeepCallback(false);
+            callback.sendPluginResult(result);
         }
     }
 
