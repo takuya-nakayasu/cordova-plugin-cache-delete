@@ -39,15 +39,11 @@ public class CacheDelete extends CordovaPlugin {
         return false;
     }
 
-    private void deleteCache() {
+    private boolean deleteCache() {
         File cacheDir = cordova.getActivity().getApplicationContext().getCacheDir();
         return clearCacheFolder(cacheDir);
     }
 
-    /**
-     * キャッシュファイルを削除する処理。
-     *
-     */
     private boolean clearCacheFolder (File dir) {
         try {
             if (dir != null && dir.isDirectory()) {
@@ -57,10 +53,8 @@ public class CacheDelete extends CordovaPlugin {
                     }
                     child.delete();
                 }
-                return true;
-            } else {
-                return false;
             }
+            return true;
         } catch (Exception ex) {
             Log.e(TAG, ERROR_MESSAGE, ex);
             return false;
