@@ -34,41 +34,36 @@ public class CacheDelete extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext)
             throws JSONException {
         if("deleteCache".equals(action)) {
-            deleteCache(callbackContext);
-            return true;
+            return deleteCache();
         }
         return false;
     }
 
-    private void deleteCache(CallbackContext callbackContext) {
+    private void deleteCache() {
         File cacheDir = cordova.getActivity().getApplicationContext().getCacheDir();
-        clearCacheFolder(cacheDir, callbackContext);
+        return clearCacheFolder(cacheDir);
     }
 
     /**
      * キャッシュファイルを削除する処理。
      *
      */
-    private void clearCacheFolder (File dir, CallbackContext callbackContext) {
+    private boolean clearCacheFolder (File dir) {
         try {
             if (dir != null && dir.isDirectory()) {
                 for (File child : dir.listFiles()) {
                     if (child.isDirectory()) {
-                        clearCacheFolder(child, callbackContext);
+                        clearCacheFolder(child);
                     }
                     child.delete();
                 }
+                return true;
+            } else {
+                return false;
             }
-            // send success result to cordova
-            PluginResult result = new PluginResult(PluginResult.Status.OK);
-            result.setKeepCallback(false);
-            callback.sendPluginResult(result);
         } catch (Exception ex) {
             Log.e(TAG, ERROR_MESSAGE, ex);
-            // return error answer to cordova
-            PluginResult result = new PluginResult(PluginResult.Status.ERROR, ERROR_MESSAGE);
-            result.setKeepCallback(false);
-            callback.sendPluginResult(result);
+            return false;
         }
     }
 
