@@ -9,6 +9,10 @@
   <keywords>cordova, webview, cache, delete, Code Cache, android, HTTP Cache, cordova-android</keywords>
   <repo>https://github.com/l08084/cordova-plugin-cache-delete.git</repo>
 
+  <engines>
+    <engine name="cordova" version=">=6.1.1" />
+  </engines>
+
   <js-module src="www/CacheDelete.js" name="CacheDelete">
     <clobbers target="CacheDelete" />
   </js-module>
@@ -16,10 +20,10 @@
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="CacheDelete">
-        <param name="android-package" value="jp.l08084.CacheDelete"/>
+        <param name="android-package" value="jp.l08084.plugin.CacheDelete"/>
       </feature>
     </config-file>
-    <source-file src="src/android/CacheDelete.java" target-dir="src/jp/l08084/CacheDelete/" />
+    <source-file src="src/android/CacheDelete.java" target-dir="src/jp/l08084/plugin/" />
   </platform>
 
 </plugin>

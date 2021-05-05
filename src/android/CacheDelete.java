@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package jp.l08084;
+package jp.l08084.plugin;
 
 import java.io.File;
 
