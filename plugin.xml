@@ -10,7 +10,7 @@
   <repo>https://github.com/l08084/cordova-plugin-cache-delete.git</repo>
 
   <engines>
-    <engine name="cordova" version=">=6.1.1" />
+    <engine name="cordova" version=">=3.0.0" />
   </engines>
 
   <js-module src="www/CacheDelete.js" name="CacheDelete">
