@@ -28,11 +28,13 @@ import android.util.Log;
 
 public class CacheDelete extends CordovaPlugin {
     private static final String TAG = "CacheDelete";
+    private static final String DELETE_CACHE_MESSAGE = "Cordova CacheDelete.deleteCache() called.";
     private static final String ERROR_MESSAGE = "Failed to delete the cache, error";
     
     @Override
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext)
             throws JSONException {
+        Log.v(LOG_TAG, DELETE_CACHE_MESSAGE);
         if("deleteCache".equals(action)) {
             deleteCache(callbackContext);
             return true;
