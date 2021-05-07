@@ -16,21 +16,20 @@
 
 package jp.l08084.plugin;
 
-import java.io.File;
+import android.util.Log;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import android.util.Log;
+import java.io.File;
 
 public class CacheDelete extends CordovaPlugin {
     private static final String TAG = "CacheDelete";
     private static final String DELETE_CACHE_MESSAGE = "Cordova CacheDelete.deleteCache() called.";
     private static final String ERROR_MESSAGE = "Failed to delete the cache, error";
-    
+
     @Override
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext)
             throws JSONException {
