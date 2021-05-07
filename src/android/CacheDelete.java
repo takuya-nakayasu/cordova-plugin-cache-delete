@@ -34,7 +34,7 @@ public class CacheDelete extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext)
             throws JSONException {
-        Log.v(LOG_TAG, DELETE_CACHE_MESSAGE);
+        Log.v(TAG, DELETE_CACHE_MESSAGE);
         if("deleteCache".equals(action)) {
             deleteCache(callbackContext);
             return true;
