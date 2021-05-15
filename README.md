@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/cordova-plugin-cache-delete.svg)](https://badge.fury.io/js/cordova-plugin-cache-delete)
+
 # Cordova plugin to delete Webview cache
 
 This is a WebView cache plugin for Cordova supporting Android. It allows to delete the cordova webview cache.
