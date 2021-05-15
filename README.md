@@ -21,6 +21,8 @@ cordova plugin add cordova-plugin-cache-delete
 
 ## Code example
 
+To use in a TypeScript(Ionic v5/Angular) file:
+
 ```typescript
 import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
