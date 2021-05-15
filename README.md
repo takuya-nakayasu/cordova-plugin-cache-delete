@@ -66,3 +66,6 @@ export class Tab1Page {
   }
 }
 ```
+
+## License
+Applying the Apache License, Version 2.0
