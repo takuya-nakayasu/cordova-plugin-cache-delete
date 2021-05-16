@@ -7,7 +7,7 @@ This is a WebView cache plugin for Cordova supporting Android. It allows to dele
 
 There is one method:
 
-- CacheDelete.deleteCache(successCallback, errorCallback)
+- `CacheDelete.deleteCache()`
 
 ![Sample image](https://github.com/l08084/image-garage/blob/22409e0710cbedbcfc68f4de8d6ca30178050588/cordova-plugin-cache-delete.png)
 
@@ -21,6 +21,12 @@ cordova plugin add cordova-plugin-cache-delete
 
 ## Supported Platforms
 - Android
+
+## Methods
+
+|**Method**| **Signature** | **Description** |
+| --- | --- | --- |
+| **CacheDelete.deleteCache()** | `CacheDelete.deleteCache(): Promise<any>` | Delete the cordova webview cache. This method returns a promise that fulfills when a call was successful. |
 
 ## Code example
 
@@ -45,29 +51,11 @@ export class Tab1Page {
     this.platform.ready().then(() => {
       if (this.platform.is('android')) {
         // delete cache
-        CacheDelete.deleteCache(this.successCallback, this.errorCallback);
+        CacheDelete.deleteCache()
+          .then(() => console.log('delete cache success!!'))
+          .catch((error) => console.error(error));
       }
     });
-  }
-
-  /**
-   * success callback
-   *
-   * @private
-   * @memberof Tab1Page
-   */
-  private successCallback(): void {
-    console.log('success');
-  }
-
-  /**
-   * error callback
-   *
-   * @private
-   * @memberof Tab1Page
-   */
-  private errorCallback(): void {
-    console.log('error');
   }
 }
 ```
