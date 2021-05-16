@@ -24,7 +24,7 @@ cordova plugin add cordova-plugin-cache-delete
 
 ## Methods
 
-| **CacheDelete.deleteCache()** |
+| **CacheDelete.deleteCache()** | |
 | --- | --- |
 | **Description** | Delete the cordova webview cache. This method returns a promise that fulfills when a call was successful. |
 | **Signature** | `CacheDelete.deleteCache(): Promise<any>` |
